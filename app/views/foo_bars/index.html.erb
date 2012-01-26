@@ -1,0 +1,23 @@
+<h1>Listing foo_bars</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @foo_bars.each do |foo_bar| %>
+  <tr>
+    <td><%= foo_bar.name %></td>
+    <td><%= link_to 'Show', foo_bar %></td>
+    <td><%= link_to 'Edit', edit_foo_bar_path(foo_bar) %></td>
+    <td><%= link_to 'Destroy', foo_bar, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Foo bar', new_foo_bar_path %>
