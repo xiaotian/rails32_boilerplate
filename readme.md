@@ -7,8 +7,11 @@ dependencies
 * rvm
 ``` bash
 # make sure iconv/readline is installed with rvm
+
 $> rvm pkg install iconv
+
 $> rvm pkg install readline
+
 $> rvm install 1.9.3-p0 --with-iconv-dir=$rvm_path/user
 ```
 
@@ -28,15 +31,20 @@ installation
 
 * clone project and re-init git
 ``` bash
+
 $> git clone git@github.com:xiaotian/rails32_boilerplate.git
+
 $> cd rails32_boilerplate
+
 $> rm -rf .git
+
 $> git init
 ```
 
 * rename project
 ``` bash
 $> find ./ -type f -exec sed -i '' 's/Rails32Boilerplate/SampleApp/g' {} \;
+
 $> find ./ -type f -exec sed -i '' 's/rails32_boilerplate/sample_app/g' {} \;
 ```
 
