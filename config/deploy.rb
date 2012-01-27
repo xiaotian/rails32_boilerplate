@@ -22,7 +22,7 @@ set :copy_strategy, :export
 set :copy_exclude, %w(**/.git **/.autotest)
 set :copy_compression, :gzip
 
-set :bundle_without, [:development, :test]
+set :bundle_without, [:darwin, :development, :test]
 
 #
 # if you're still using the script/reaper helper you will need

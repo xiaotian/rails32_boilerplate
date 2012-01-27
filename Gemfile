@@ -23,7 +23,6 @@ gem 'jquery-rails'
 group :development, :test do
   gem 'pry'
   gem 'rspec-rails', "~> 2.6"
-  gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
   gem 'guard-rspec'
   gem 'spork-rails'
   gem 'guard-spork'
@@ -38,6 +37,10 @@ group :test do
   gem 'rails3-generators'
   gem 'factory_girl_rails'
   gem 'capybara'
+end
+
+group :test, :darwin do
+  gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
 end
 
 group :development do
