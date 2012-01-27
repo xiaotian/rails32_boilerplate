@@ -1,6 +1,6 @@
 Rails32Boilerplate::Application.routes.draw do
   resources :foo_bars
-
+  root :to => 'foo_bars#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
