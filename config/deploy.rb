@@ -22,7 +22,13 @@ set :copy_strategy, :export
 set :copy_exclude, %w(**/.git **/.autotest)
 set :copy_compression, :gzip
 
+# for excluding rb-fsevent(a OS X only gem)
 set :bundle_without, [:darwin, :development, :test]
+
+# line below address the error caused by capistrano attempt
+# to touch public/(images|javascripts|stylesheets), these
+# directories are no longer in use in Rails 3.1 and above.
+set :normalize_asset_timestamps, false
 
 #
 # if you're still using the script/reaper helper you will need
