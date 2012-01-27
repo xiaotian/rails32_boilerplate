@@ -24,7 +24,6 @@ gem 'backbone-on-rails'
 group :development, :test do
   gem 'pry'
   gem 'rspec-rails', "~> 2.6"
-  gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
   gem 'guard-rspec'
   gem 'spork-rails'
   gem 'guard-spork'
@@ -41,11 +40,17 @@ group :test do
   gem 'capybara'
 end
 
-group :development do
-  gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
-
+group :test, :darwin do
+  gem 'rb-fsevent' #, :require => false if RUBY_PLATFORM =~ /darwin/i
 end
 
+group :development do
+  gem 'annotate'
+end
+
+# Deploy with Capistrano
+gem 'capistrano'
+gem 'capistrano-ext'  #for multi-stage support
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -56,5 +61,3 @@ end
 # Use unicorn as the web server
 # gem 'unicorn'
 
-# Deploy with Capistrano
-# gem 'capistrano'

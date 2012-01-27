@@ -58,6 +58,7 @@ module Rails32Boilerplate
 
     # Enable the asset pipeline
     config.assets.enabled = true
+    config.assets.precompile += ["screen.css", "print.css", "ie.css"]
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
