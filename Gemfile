@@ -42,9 +42,11 @@ end
 
 group :development do
   gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
-
 end
 
+# Deploy with Capistrano
+gem 'capistrano'
+gem 'capistrano-ext'  #for multi-stage support
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -55,5 +57,3 @@ end
 # Use unicorn as the web server
 # gem 'unicorn'
 
-# Deploy with Capistrano
-# gem 'capistrano'
