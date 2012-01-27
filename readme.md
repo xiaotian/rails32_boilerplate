@@ -5,6 +5,7 @@ dependencies
 ------------
 
 * rvm
+
 ``` bash
 # make sure iconv/readline is installed with rvm
 
@@ -13,6 +14,7 @@ $> rvm pkg install iconv
 $> rvm pkg install readline
 
 $> rvm install 1.9.3-p0 --with-iconv-dir=$rvm_path/user
+
 ```
 
 gems included
@@ -30,6 +32,7 @@ installation
 ------------
 
 * clone project and re-init git
+
 ``` bash
 
 $> git clone git@github.com:xiaotian/rails32_boilerplate.git
@@ -42,7 +45,9 @@ $> git init
 ```
 
 * rename project
+
 ``` bash
+
 $> find ./ -type f -exec sed -i '' 's/Rails32Boilerplate/SampleApp/g' {} \;
 
 $> find ./ -type f -exec sed -i '' 's/rails32_boilerplate/sample_app/g' {} \;
@@ -52,6 +57,8 @@ $> find ./ -type f -exec sed -i '' 's/rails32_boilerplate/sample_app/g' {} \;
     config/initializer/secret_token.rb (you can generate a dummy project and copy from it)
 
 * remove FooBar scaffold
+
 ``` bash
+
 $> rails destroy scaffold FooBar
 ```
