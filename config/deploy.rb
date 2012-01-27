@@ -13,7 +13,7 @@ require 'capistrano/ext/multistage'
 
 set :scm, :git
 set :repository,  "xiaotian@code:/git/rails32_boilerplate.git"
-set :branch, "capistrano"
+set :branch, "master"
 
 set :rails_env, 'production'
 
