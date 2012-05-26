@@ -6,7 +6,7 @@ server "alpha.domain.com", :app, :web, :db, :primary => true
 
 set :host, "alpha.domain.com" #required by capistrano mailer
 
-set :rails_env,   "alpha"
+# set :rails_env,   "alpha"
 set :unicorn_env, "alpha"
-set :app_env,     "alpha"
+# set :app_env,     "alpha"
 
