@@ -1,4 +1,4 @@
-set :ssh_options, {:username=>'rails32_boilerplate', :keys => File.join(ENV['HOME'],'.ssh', 'domain.com-deploy-keypair')}
+set :ssh_options, {:username=>'deploy', :keys => File.join(ENV['HOME'],'.ssh', 'id_rsa_deploy')}
 
 set :runner, 'rails32_boilerplate'
 
