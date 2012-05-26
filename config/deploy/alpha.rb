@@ -6,4 +6,7 @@ server "web01", :app, :web, :db, :primary => true
 
 set :host, "web01" #required by capistrano mailer
 
+set :rails_env,   "alpha"
+set :unicorn_env, "alpha"
+set :app_env,     "alpha"
 

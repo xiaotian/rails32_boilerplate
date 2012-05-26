@@ -45,11 +45,12 @@ end
 
 group :development do
   gem 'annotate'
-end
 
-# Deploy with Capistrano
-gem 'capistrano'
-gem 'capistrano-ext'  #for multi-stage support
+  # Deploy with Capistrano
+  gem 'capistrano'
+  gem 'capistrano-ext'  #for multi-stage support
+  gem 'capistrano-unicorn'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -58,5 +59,5 @@ gem 'capistrano-ext'  #for multi-stage support
 # gem 'jbuilder'
 
 # Use unicorn as the web server
-# gem 'unicorn'
+gem 'unicorn'
 

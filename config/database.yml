@@ -17,7 +17,7 @@ common: &common
   encoding: unicode
   pool: 5
   username: rails32_boilerplate
-  password: passw@rd
+  password: password
 
   # Minimum log levels, in increasing order:
   #   debug5, debug4, debug3, debug2, debug1,
@@ -49,4 +49,3 @@ test:
 production:
   <<: *common
   database: rails32_boilerplate_production
-  password:

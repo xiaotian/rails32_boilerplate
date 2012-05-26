@@ -3,11 +3,12 @@ $:.unshift(File.expand_path('./lib', ENV['rvm_path'])) # Add RVM's lib directory
 require "rvm/capistrano"
 require 'bundler/capistrano'
 
-set :rvm_ruby_string, 'ruby-1.9.3-p0@rails32_boilerplate'
+set :use_sudo, false
+set :rvm_ruby_string, 'ruby-1.9.3-p194@rails32_boilerplate'
 
 set :application, "rails32_boilerplate"
 
-set :stages, %w(alpha prod)
+set :stages, %w(alpha production)
 set :default_stage, "alpha"
 require 'capistrano/ext/multistage'
 
@@ -35,10 +36,15 @@ set :normalize_asset_timestamps, false
 # these http://github.com/rails/irs_process_scripts
 
 # If you are using Passenger mod_rails uncomment this:
-namespace :deploy do
-  task :start do ; end
-  task :stop do ; end
-  task :restart, :roles => :app, :except => { :no_release => true } do
-    run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
-  end
-end
+# namespace :deploy do
+#   task :start do ; end
+#   task :stop do ; end
+#   task :restart, :roles => :app, :except => { :no_release => true } do
+#     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
+#   end
+# end
+
+# for unicorn app server
+# should be placed after all hooks
+require 'capistrano-unicorn'
+
