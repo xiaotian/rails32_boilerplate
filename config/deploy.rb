@@ -4,6 +4,7 @@ require "rvm/capistrano"
 require 'bundler/capistrano'
 
 set :use_sudo, false
+set :admin_runner, 'rails32_boilerplate'
 set :rvm_ruby_string, 'ruby-1.9.3-p194@rails32_boilerplate'
 
 set :application, "rails32_boilerplate"
